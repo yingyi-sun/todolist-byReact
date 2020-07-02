@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?gc90d4');
+    src: url('../fonts/icomoon.eot?gc90d4#iefix') format('../embedded-opentype'), url('../fonts/icomoon.ttf?gc90d4') format('truetype'), url('../fonts/icomoon.woff?gc90d4') format('woff'), url('../fonts/icomoon.svg?gc90d4#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+body {
+    padding: 50px 20px;
+    background-color: #fc6c48;
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+    color: #444;
+}
+
+h1 {
+    margin: 20px auto 40px;
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.box {
+    position: relative;
+    width: 358px;
+    min-height: 435px;
+    padding: 40px 20px;
+    margin: 20px auto 50px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    background-color: #f4f7fc;
+    white-space: nowrap;
+}
+
+.date {
+    margin: 15px 0;
+    color: #f65c65;
+    font-size: 18px;
+}
+
+.inputTxt {
+    width: 252px;
+    height: 32px;
+    margin: 15px 0;
+    padding: 3px 16px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-size: 16px;
+    outline: none;
+    cursor: text;
+}
+
+.inputTxt:focus {
+    border: 1px solid #a3b1ff;
+}
+
+.btn {
+    float: right;
+    width: 39px;
+    height: 16px;
+    margin: 15px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    background-color: #ddd;
+    color: #fefefe;
+    font-size: 33px;
+    text-align: center;
+    line-height: 16px;
+    cursor: pointer;
+}
+
+.btnAdd {
+    border-color: #6664ff;
+    background-color: #6664ff;
+    transition: all 0.25s ease-in;
+}
+
+.btnAdd:hover {
+    border-color: #4442f6;
+    background-color: #4442f6;
+}
+
+.btnAdd:active {
+    transform: scale(0.9);
+}
+
+.summary {
+    width: 358px;
+    height: 20px;
+    margin: 15px 0;
+}
+
+.empty {
+    font-weight: bold;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.empty img {
+    width: 50px;
+    display: block;
+    margin: 20px auto;
+}
+
+.todolist {
+    margin-bottom: 30px;
+}
+
+.todolist li {
+    position: relative;
+    width: 320px;
+    height: 20px;
+    padding: 12px 0 12px 38px;
+    margin: 10px 0;
+    background-color: #e0e8f5;
+    border-radius: 3px;
+}
+
+.completelist li {
+    background-color: #fff;
+}
+
+.completelist .txt {
+    text-decoration: line-through;
+}
+
+.todo-check {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    opacity: 1;
+    border-radius: 2px;
+    border: 1px solid #cfdcec;
+    cursor: pointer;
+}
+
+.delete {
+    position: absolute;
+    height: 100%;
+    width: 0;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    background-color: #f56468;
+    opacity: 0;
+    transition: all .25s ease;
+    cursor: pointer;
+}
+
+.delete::after {
+    content: '\e9ad';
+    position: absolute;
+    font-size: 13px;
+    top: 50%;
+    left: 50%;
+    font-family: 'icomoon';
+    color: #fff;
+    /* background: url(images/trash.svg) no-repeat center center; */
+    transform: translate(-50%, -50%) scale(0.5);
+    transition: all .25s ease;
+}
+
+.todolist li:hover .delete {
+    width: 44px;
+    opacity: 1;
+}
+
+.todolist li:hover .delete::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.operation {
+    position: absolute;
+    height: 30px;
+    /* width: 100%; */
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.btn-oper {
+    /* display: inline-block; */
+    float: left;
+    position: relative;
+    margin: 0 4px;
+    line-height: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+.btn-oper::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #f4586e;
+    transition: all .25s ease;
+}
+
+.btn-oper:hover::after {
+    width: 100%;
+}
